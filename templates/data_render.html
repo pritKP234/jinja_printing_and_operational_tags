@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Use of jinja printing tags</title>
+    <title>Jinja page 1</title>
 </head>
 <body>
     <center>
@@ -13,6 +13,8 @@
 {% if age > 10 %}
         <h2>Age of the student is {{age}}</h2>
 {% endif %}
+
+<a href="{% url 'condition' %}">Click here to go to conditon page</a>
     </center>
 </body>
 </html>

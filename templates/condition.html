@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinja page 2</title>
+</head>
+<body>
+    <center>
+        <!-- <h1><i>simple if-else condition</i></h1>
+
+        {% if a > b %}
+            <h1>inside if block</h1>
+            <h1>a is greater than b</h1>
+        {% else %}
+            <h1>inside else block</h1>
+            <h1>b is greater than a</h1>
+        {% endif %}  -->
+
+        <!-- <h1><i>simple if-elif condition</i></h1>
+
+        {% if a > b and a > c %}
+            <h1>inside if block</h1>
+            <h2>a is highest i.e; {{a}}</h2>
+        {% elif b > c %}
+            <h1>inside elif block</h1>
+            <h2>b is highest i.e; {{b}}</h2>
+        {% else %}
+            <h1>inside else block</h1>
+            <h2>c is highest i.e; {{c}}</h2>
+        {% endif %} -->
+
+        <h1><i>nested if-else condition</i></h1>
+
+        {% if a > b %}
+            {% if a > c %}
+                <h2>a is highest ({{a}})</h2>
+            {% else %}
+                <h2>c is highest ({{c}})</h2>
+            {% endif %}
+        {% else %}
+            {% if b > c %}
+                <h2>b is highest ({{b}})</h2>
+            {% else %}
+                <h2>c is highest ({{c}})</h2>
+            {% endif %}
+        {% endif %}
+
+        <a href="{% url 'data_render' %}">Click here to go to data_render page</a>
+
+    </center>
+</body>
+</html>
